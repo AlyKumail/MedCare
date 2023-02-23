@@ -1,0 +1,55 @@
+:root {
+    --darkBlue: #2c3e50;
+    --aquaBlue: #1abc9c;
+    --lightGray: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--darkBlue);
+    color: #fff;
+}
+
+html {
+    font-family: "Roboto";
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-between-center-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-col {
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+}
+
+.grayDash {
+    width: 50%;
+    height: 1px;
+    background-color: var(--aquaBlue);
+    margin: 1.5rem auto;
+}
