@@ -1,0 +1,44 @@
+.records{
+    width: 97%;
+    margin: 1rem auto;
+}
+.records-body{
+    /* gap: .85rem; */
+    flex-wrap: wrap;
+}
+.record{
+    min-width: 32%;
+    border-radius: 10px;
+    padding: .75rem 1rem;
+    padding-bottom: 1.25rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.record p{
+    font-size: .85rem;
+}
+.prescription{
+    background-color: var(--prescriptionColor);
+}
+.report{
+    background-color: var(--reportColor);
+}
+.labReport{
+    background-color: var(--labReportColor);
+}
+.record button{
+    padding: .3rem 1rem;
+    text-align: center;
+    background: #D9D9D9;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    color: #000;
+    font-weight: 500;
+    margin-top: .6rem;
+    cursor: pointer;
+}
+.record-bgImg{
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+}

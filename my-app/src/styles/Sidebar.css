@@ -1,0 +1,56 @@
+.sidebar{
+    width: 17%;
+    background-color: var(--sidebarColor);
+    min-height: 100vh;
+
+}
+.sidebar .logo{
+    margin-bottom: 2rem;
+}
+.sidebar-wrap{
+    /* border: 1px solid red; */
+    width: 75%;
+    margin: 1.35rem auto;
+}
+.sidebar a{
+    color: var(--navlinksColor);
+}
+.link{
+    gap: .5rem;
+    margin: 1.75rem 0;
+}
+.link:hover{
+    opacity: .8;
+}
+.link a{
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+.link-active{
+    color: #17957C !important;
+}
+.btn-connect{
+    display: block;
+    text-align: center;
+    background: #33333379;
+    color: white !important;
+    width: 95%;
+    padding: .4rem 0;
+    border-radius: 2px;
+    margin-top: 3rem;
+    margin-bottom: 9rem;
+}
+.btn-logout{
+    display: block;
+    text-align: center;
+    border: 1px solid #33333396;
+    color: #33333396 !important;
+    width: 95%;
+    padding: .4rem 0;
+    border-radius: 2px;
+}
+.btn-logout:hover,
+.btn-connect:hover{
+    opacity: 0.8;
+    
+}

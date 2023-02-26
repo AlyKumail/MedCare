@@ -1,0 +1,115 @@
+.patient-container{
+    background-color: var(--portalBgColor);
+    min-height: 100vh;
+    font-family: 'Poppins';
+    color: #333;
+}
+.portal-main{
+    width: 83%;
+    min-height: 100vh;
+}
+
+.portal-main{
+    border: 1px solid gray;
+    padding: 0 .5rem;
+}
+.portal-main-left,
+.portal-main-right{
+    width: 50%;
+    /* border: 1px solid red; */
+    padding: 1.5rem;
+}
+.portal-main-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.card{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+.card-header{
+    margin-bottom: .6rem;
+}
+.card-header p{
+    font-size: .8rem;
+    opacity: .8;
+    margin-top: -0.2rem;
+}
+.record-access .input-item{
+    /* border: 1px solid red; */
+    margin: 1rem 0;
+}
+.record-access .input-item label{
+    width: 9%;
+}
+.record-access .input-item input{
+    width: 91%;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    font-size: .95rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: .4rem;
+    margin-left: .5rem;
+}
+.record-access .input-item input:focus{
+    outline: 1px solid rgba(0, 0, 0, 0.25);
+}
+.record-access button{
+    padding: .75rem 3rem;
+    font-size: .95rem;
+    background-color: var(--aquaBlue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    margin: 0 0 0 auto;
+    font-weight: 500;
+}
+.record-access button:hover{
+    opacity: .9;
+}
+.sub-card{
+    border: 1px solid #6e6e6e33;
+    padding: .48rem .88rem;
+    gap: .25rem;
+    background-color: var(--portalBgColor);
+    padding-bottom: 1rem;
+    margin-bottom: .75rem;
+}
+
+.sub-card p, .sub-card span{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
+.sub-card-buttons{
+    gap: .8rem;
+}
+
+.date {
+    opacity: .6;
+}
+.sub-card button{
+    border: none;
+    padding: .5rem 0;
+    cursor: pointer;
+    margin-top: .5rem;
+    background-color: var(--aquaBlue);
+    color: #fff;
+    opacity: .85;
+    font-weight: 600;
+}
+.sub-card-buttons button{
+    padding: .5rem 1.2rem;
+    border-radius: 5px;
+    font-size: .7rem;
+}
+.btn-notification{
+    background: #D9D9D9 !important;
+    color: #000 !important;
+    gap: .25rem;
+}

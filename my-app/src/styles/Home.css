@@ -1,4 +1,7 @@
-
+.hero-container{
+    background-color: var(--darkBlue);
+    min-height: 100vh;
+}
 .hero-left {
     width: 53%;
 }

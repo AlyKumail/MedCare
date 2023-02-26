@@ -2,6 +2,12 @@
     --darkBlue: #2c3e50;
     --aquaBlue: #1abc9c;
     --lightGray: #e0e0e0;
+    --sidebarColor: #E8F0F0;
+    --portalBgColor: #FAFAFA;
+    --navlinksColor: #9ba7a6;
+    --prescriptionColor: #9affb0e5;
+    --reportColor: #dab7f7e8;
+    --labReportColor: #fed6a6e5;
 }
 
 * {
@@ -11,7 +17,7 @@
 }
 
 body {
-    background-color: var(--darkBlue);
+    /* background-color: var(--darkBlue); */
     color: #fff;
 }
 
@@ -29,10 +35,27 @@ a {
     margin: 0 auto;
 }
 
+.flex{
+    display: flex;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+.flex-start-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .flex-between-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.flex-between-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .flex-between-center-col {
     display: flex;
