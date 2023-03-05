@@ -26,7 +26,7 @@ const Sidebar = ({active}) => {
             </div>
             <div className="link flex-center">
               <img src={user} alt="" />
-              <Link className={active == 'profile' ? 'link-active' : ''}>Profile</Link>
+              <Link to="/profile" className={active == 'profile' ? 'link-active' : ''}>Profile</Link>
             </div>
           </div>
           <div className="connect">

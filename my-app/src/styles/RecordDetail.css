@@ -1,0 +1,51 @@
+.recordDetail{
+    width: 90%;
+    margin: 1rem auto;
+}
+.recordDetail-header{
+    margin-top: 1.5rem;
+}
+.recordDetail-header h4,
+.recordDetail-body h4{
+    color: var(--aquaBlue);
+    font-weight: 500;
+    margin-bottom: .4rem;
+}
+.recordDetail-header p{
+    font-size: .9rem;
+    color: #333;
+    margin: .13rem 0;
+}
+.general-info p{
+    color: #505050;
+}
+
+.recordDetail-body{
+    border-top: 2px solid #DEDEDE;
+    margin-top: 1.85rem;
+    padding-top: 1.2rem;
+}
+.recordDetail table{
+    width: 100%;
+    margin-top: 1.25rem;
+}
+
+.recordDetail table th,
+.recordDetail table td{
+    font-size: .9rem;
+    font-weight: 500;
+}
+.recordDetail table th{
+    color: var(--aquaBlue);
+    margin-bottom: 1rem !important;
+}
+.table-space{
+    display: block;
+    width: 100%;
+    margin-bottom: .4rem;
+    /* border: 1px solid red; */
+}
+.recordDetail table td{
+    text-align: center;
+    color: #333;
+}

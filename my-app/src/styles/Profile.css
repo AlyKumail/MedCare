@@ -1,0 +1,58 @@
+.profile{
+    width: 90%;
+    margin: 1rem auto;
+    padding-bottom: 3rem;
+}
+.profile-public{
+    width: 100%;
+    margin: 0 auto 0 0;
+    margin-top: 1.5rem;
+    background: linear-gradient(91.9deg, rgba(94, 216, 192, 0.65) 2.63%, rgba(192, 192, 192, 0.69) 98.56%);
+    border-radius: 15px;
+    padding: 2rem;
+    gap: 1.3rem;
+}
+.profile-public-detail{
+    width: 100%;
+    padding-right: 1rem;
+}
+.profile-public-detail h2{
+    font-weight: 600;
+}
+.profile-public-detail p{
+    color: rgba(63, 63, 63, 0.938)
+}
+.profile-edit{
+    margin-top: 2rem;
+}
+.profile-edit form{
+    gap: 5rem;
+    margin-top: 0.7rem;
+}
+.input-item{
+    margin: .75rem 0;
+}
+.input-item label{
+    width: 5rem;
+}
+.input-item input{
+    width: 17rem;
+    margin: .5rem 0;
+    padding: .3rem;
+    font-size: .9rem;
+    color: #333;
+}
+.input-item input:focus{
+    outline: none;
+}
+.input-item button{
+    border: none;
+    padding: .7rem 3.5rem;
+    border-radius: 5px;
+    background: var(--aquaBlue);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 0 0 auto;
+    font-size: .85rem;
+}

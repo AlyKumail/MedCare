@@ -42,6 +42,7 @@ a {
     display: flex;
     align-items: center;
 }
+
 .flex-start-col{
     display: flex;
     flex-direction: column;
