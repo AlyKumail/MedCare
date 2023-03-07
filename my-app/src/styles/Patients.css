@@ -1,0 +1,36 @@
+.patients{
+    width: 95%;
+    margin: 0 auto;
+}
+.patients .card-header{
+    margin-bottom: 1.15rem;
+}
+.patients-item{
+    background-color: #f1f7f7cc;
+    padding: 1.3rem 1.85rem;
+    border-radius: 10px;
+    gap: 1.25rem;
+    margin: .75rem 0;
+}
+.patients-item-text p{
+    font-size: .85rem;
+}
+.patients-item-text{
+    /* border: 1px solid red; */
+}
+.patients-item-button{
+    /* border: 1px solid blue; */
+    margin: 0 0 0 auto;
+
+}
+.patients-item-button button{
+    border: none;
+    padding: .75rem 1.5rem;
+    cursor: pointer;
+    margin-top: .5rem;
+    background-color: var(--aquaBlue);
+    color: #fff;
+    opacity: .85;
+    font-weight: 600;
+    border-radius: 5px;
+}
