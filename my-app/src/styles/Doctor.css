@@ -1,0 +1,34 @@
+.doctor-container .portal-main{
+    padding: 1.2rem 0;
+}
+.doctor-container .record-access{
+    width: 50%;  
+}
+.portal-main-row{
+    width: 95%;
+    margin: 0 auto;
+    gap: 1.65rem;
+}
+.total-appointment,
+.total-patient{
+    width: 25%;
+    min-height: 195px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+.total-appointment p,
+.total-patient p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--aquaBlue);
+}
+.ongoing-appointments{
+    margin-top: 1.5rem;
+}
+.ongoing-appointments .sub-card button{
+    width:15%;
+    
+}

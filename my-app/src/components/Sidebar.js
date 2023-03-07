@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "../styles/Sidebar.css";
 import { Link } from "react-router-dom";
 
@@ -8,36 +8,94 @@ import record from "../img/icon-record.png";
 // import history from "../img/icon-history.png";
 import user from "../img/icon-user.png";
 
-const Sidebar = ({active}) => {
+const Sidebar = ({ active, isDoctorDashboard = false }) => {
   return (
     <div className="sidebar">
-        <div className="sidebar-wrap">
-          <div className="logo">
-            <img src={logo} alt="" />
-          </div>
+      <div className="sidebar-wrap">
+        <div className="logo">
+          <img src={logo} alt="" />
+          {console.log(isDoctorDashboard)}
+        </div>
+        {isDoctorDashboard ? (
           <div className="navlinks">
             <div className="link flex-center">
               <img src={grid} alt="" />
-              <Link to="/patient" className={active == 'patient' ? 'link-active' : ''}>Dashboard</Link>
+              <Link
+                to="/doctor"
+                className={active == "doctor" ? "link-active" : ""}
+              >
+                Dashboard
+              </Link>
             </div>
             <div className="link flex-center">
               <img src={record} alt="" />
-              <Link to="/records" className={active == 'records' ? 'link-active' : ''}>View Records</Link>
+              <Link
+                to="/patients"
+                className={active == "patients" ? "link-active" : ""}
+              >
+                Patients
+              </Link>
             </div>
             <div className="link flex-center">
               <img src={user} alt="" />
-              <Link to="/profile" className={active == 'profile' ? 'link-active' : ''}>Profile</Link>
+              <Link
+                to="/profile"
+                className={active == "profile" ? "link-active" : ""}
+              >
+                History
+              </Link>
+            </div>
+            <div className="link flex-center">
+              <img src={user} alt="" />
+              <Link
+                to="/profile"
+                className={active == "profile" ? "link-active" : ""}
+              >
+                Profile
+              </Link>
             </div>
           </div>
-          <div className="connect">
-            <Link className='btn-connect'>Connect Wallet</Link>
+        ) : (
+          <div className="navlinks">
+            <div className="link flex-center">
+              <img src={grid} alt="" />
+              <Link
+                to="/patient"
+                className={active == "patient" ? "link-active" : ""}
+              >
+                Dashboard
+              </Link>
+            </div>
+            <div className="link flex-center">
+              <img src={record} alt="" />
+              <Link
+                to="/records"
+                className={active == "records" ? "link-active" : ""}
+              >
+                View Records
+              </Link>
+            </div>
+            <div className="link flex-center">
+              <img src={user} alt="" />
+              <Link
+                to="/profile"
+                className={active == "profile" ? "link-active" : ""}
+              >
+                Profile
+              </Link>
+            </div>
           </div>
-          <div className="logout">
-            <Link className='btn-logout'>Logout</Link>
-          </div>
+        )}
+
+        <div className="connect">
+          <Link className="btn-connect">Connect Wallet</Link>
+        </div>
+        <div className="logout">
+          <Link className="btn-logout">Logout</Link>
         </div>
       </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Sidebar
+export default Sidebar;

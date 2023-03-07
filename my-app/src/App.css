@@ -77,3 +77,25 @@ img {
     background-color: var(--aquaBlue);
     margin: 1.5rem auto;
 }
+
+.patient-container{
+    background-color: var(--portalBgColor);
+    min-height: 100vh;
+    font-family: 'Poppins';
+    color: #333;
+}
+.portal-main{
+    width: 83%;
+    min-height: 100vh;
+}
+
+.portal-main{
+    border: 1px solid gray;
+    padding: 0 .5rem;
+}
+.portal-main-left,
+.portal-main-right{
+    width: 50%;
+    /* border: 1px solid red; */
+    padding: 1.5rem;
+}
