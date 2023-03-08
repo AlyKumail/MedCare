@@ -23,14 +23,17 @@
     margin: 0 0 0 auto;
 
 }
-.patients-item-button button{
+.patients-item-button button,
+.form-btn{
     border: none;
     padding: .75rem 1.5rem;
     cursor: pointer;
     margin-top: .5rem;
     background-color: var(--aquaBlue);
-    color: #fff;
     opacity: .85;
     font-weight: 600;
     border-radius: 5px;
+}
+.patients-item-button a{
+    color: white;
 }

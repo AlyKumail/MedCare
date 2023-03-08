@@ -10,6 +10,8 @@ import patientImg3 from "../img/patient-img3.png";
 import patientImg4 from "../img/patient-img4.png";
 import patientImg5 from "../img/patient-img5.png";
 
+import { Link } from "react-router-dom";
+
 const Doctor = () => {
   return (
     <div className="patient-container doctor-container flex">
@@ -40,7 +42,9 @@ const Doctor = () => {
               </p>
             </div>
             <div className="patients-item-button">
-              <button>View Detail</button>
+              <button>
+                <Link to="/patientAccess">View Detail</Link>
+              </button>
             </div>
           </div>
           <div className="patients-item flex-center">
@@ -64,7 +68,9 @@ const Doctor = () => {
               </p>
             </div>
             <div className="patients-item-button">
-              <button>View Detail</button>
+              <button>
+                <Link to="/patientAccess">View Detail</Link>
+              </button>
             </div>
           </div>
           <div className="patients-item flex-center">
@@ -88,7 +94,9 @@ const Doctor = () => {
               </p>
             </div>
             <div className="patients-item-button">
-              <button>View Detail</button>
+              <button>
+                <Link to="/patientAccess">View Detail</Link>
+              </button>
             </div>
           </div>
           <div className="patients-item flex-center">
@@ -112,7 +120,9 @@ const Doctor = () => {
               </p>
             </div>
             <div className="patients-item-button">
-              <button>View Detail</button>
+              <button>
+                <Link to="/patientAccess">View Detail</Link>
+              </button>
             </div>
           </div>
           <div className="patients-item flex-center">
@@ -136,7 +146,9 @@ const Doctor = () => {
               </p>
             </div>
             <div className="patients-item-button">
-              <button>View Detail</button>
+              <button>
+                <Link to="/patientAccess">View Detail</Link>
+              </button>
             </div>
           </div>
         </div>
