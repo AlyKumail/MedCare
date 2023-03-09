@@ -6,8 +6,25 @@
     display: inline-block;
     min-width: 130px;
 }
-.record-operations-body{
+.record-operations{
     margin: 2rem 0;
+
+}
+.record-operations-tab{
+    padding-left: 1rem;
+}
+.record-operations-tab button{
+    cursor: pointer;
+    padding: .5rem .7rem;
+    border: 1px solid rgb(230, 230, 230);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: none;
+}
+.record-operations-tab-buttonActive{
+    background: rgba(94, 216, 192, 0.65);
+}
+.record-operations-body{
     background: linear-gradient(91.9deg, rgba(94, 216, 192, 0.65) 2.63%, rgba(192, 192, 192, 0.69) 98.56%);
     border-radius: 15px;
     padding: 2rem;
