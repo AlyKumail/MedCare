@@ -90,3 +90,7 @@
     display: block;
     margin: 1.2rem 0 0 auto;
 }
+.activeTab{
+    background: rgba(94, 216, 192, 0.65) !important;
+    border: none !important;
+}

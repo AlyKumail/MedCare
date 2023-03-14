@@ -93,19 +93,13 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
             </div>
             <div className="link flex-center">
               <img src={user} alt="" />
-              <Link
-                to="/profile"
-                className={active == "profile" ? "link-active" : ""}
-              >
+              <Link className={active == "profile" ? "link-active" : ""}>
                 History
               </Link>
             </div>
             <div className="link flex-center">
               <img src={user} alt="" />
-              <Link
-                to="/profile"
-                className={active == "profile" ? "link-active" : ""}
-              >
+              <Link className={active == "profile" ? "link-active" : ""}>
                 Profile
               </Link>
             </div>

@@ -81,6 +81,7 @@ const PatientAccess = () => {
                 onClick={() => {
                   setIsEnterRecordActive(true);
                 }}
+                className={isEnterRecordActive && "activeTab"}
               >
                 Enter Record
               </button>
@@ -88,6 +89,7 @@ const PatientAccess = () => {
                 onClick={() => {
                   setIsEnterRecordActive(false);
                 }}
+                className={!isEnterRecordActive && "activeTab"}
               >
                 Clinical Records
               </button>

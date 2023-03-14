@@ -23,6 +23,7 @@ const Login = ({ modalHandler }) => {
           <Link to="/patient" className="primary-btn">
             Login
           </Link>
+          <Link className="forgotPassword">Forgot Password</Link>
         </form>
       </div>
     </div>

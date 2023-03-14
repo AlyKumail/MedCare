@@ -13,7 +13,7 @@
     width: 40%;
     max-width: 550px;
     padding: 2.95rem 2.2rem;
-    background: #e9e9e9;
+    background: #e4e4e4;
     color: #333;
     border-radius: 15px;
     top: 50%;
@@ -38,6 +38,7 @@
     padding: 1em;
     border: none;
     background-color: rgb(255, 255, 255);
+    border-radius: 10px;
 }
 
 form .primary-btn {
@@ -56,4 +57,8 @@ form .primary-btn:hover {
     top: 8%;
     right: 8%;
     cursor: pointer;
+}
+.forgotPassword{
+    display: inline-block;
+    margin: 1.5rem 0;
 }
