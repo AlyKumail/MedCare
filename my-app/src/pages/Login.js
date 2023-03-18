@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Login.css";
 
+import { Link } from "react-router-dom";
+
 const Login = () => {
   const [isDoctor, setIsDoctor] = useState(false);
 
@@ -39,7 +41,9 @@ const Login = () => {
                   </label>
                   <input type="password" placeholder="" required />
                 </div>
-                <a className="primary-btn">Login</a>
+                <Link to="/patient" className="primary-btn">
+                  Login
+                </Link>
                 <a href="#" className="forgotPassword">
                   Forgot Password ?
                 </a>
@@ -62,7 +66,9 @@ const Login = () => {
                   </label>
                   <input type="password" placeholder="" required />
                 </div>
-                <a className="primary-btn">Login</a>
+                <Link to="/doctor" className="primary-btn">
+                  Login
+                </Link>
                 <a href="#" className="forgotPassword">
                   Forgot Password ?
                 </a>

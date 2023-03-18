@@ -140,7 +140,9 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
           <Link className="btn-connect">Connect Wallet</Link>
         </div>
         <div className="logout">
-          <Link className="btn-logout">Logout</Link>
+          <Link to="/" className="btn-logout">
+            Logout
+          </Link>
         </div>
       </div>
     </div>

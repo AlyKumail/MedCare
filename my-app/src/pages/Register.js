@@ -28,7 +28,7 @@ const Login = () => {
               </div>
             ) : (
               <form action="#">
-                <h3>Patient Register</h3>
+                <h3>Patient Registeration</h3>
                 <div className="form-item">
                   <label className="formLabel" htmlFor="name">
                     Name*
@@ -76,7 +76,7 @@ const Login = () => {
           <div className="form-wrap">
             {isDoctor ? (
               <form action="#">
-                <h3>Doctor Register</h3>
+                <h3>Doctor Registeration</h3>
                 <div className="form-item">
                   <label className="formLabel" htmlFor="name">
                     Name*
