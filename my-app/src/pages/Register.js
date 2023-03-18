@@ -66,7 +66,9 @@ const Login = () => {
                   </label>
                   <input type="password" placeholder="" required />
                 </div>
-                <a className="primary-btn">Register</a>
+                <a href="#" className="primary-btn">
+                  Register
+                </a>
                 <Link to="/login" className="forgotPassword">
                   Already registered ?
                 </Link>
@@ -120,7 +122,9 @@ const Login = () => {
                   </label>
                   <input type="password" placeholder="" required />
                 </div>
-                <a className="primary-btn">Register</a>
+                <a href="#" className="primary-btn">
+                  Register
+                </a>
                 <Link to="/login" className="forgotPassword">
                   Already registered ?
                 </Link>

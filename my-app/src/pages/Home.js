@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
 
 import heroImg from "../img/home-img.png";
-import Login from "../components/Login";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
