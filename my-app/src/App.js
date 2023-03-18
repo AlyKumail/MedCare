@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 import Patient from "./pages/Patient";
 import Records from "./pages/Records";
 import RecordDetail from "./pages/RecordDetail";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/doctor" element={<Doctor />}></Route>
         <Route path="/patients" element={<Patients />}></Route>
         <Route path="/patientAccess" element={<PatientAccess />}></Route>
+        <Route path="/login" element={<Login />}></Route>
         {/* <Route path="/patient/profile" element={<Profile />}></Route>
                 <Route path="/patient/history" element={<PatientHistory />}></Route>
                 <Route path="/doctor" element={<Doctor />}></Route>
