@@ -159,17 +159,23 @@ form .primary-btn:hover {
         z-index: 1;
     }
     .form-container { 
-        
-        padding: 2rem ;
+        background-color: white;
+        padding: 2rem 0 ;
         
     }
     .whiteBg{
         display: none;
+        height: 100%;
+        width: 100%;
+        left: 0;
     }
     .switch-btn{
-        width: 50%;
+        width: 60%;
     }
     .switch{
         margin: 1rem 0;
+    }
+    .form-container h3{
+        /* color: white; */
     }
 }

@@ -22,5 +22,7 @@ header .primary-btn {
 }
 
 @media screen and (max-width: 768px){
-    
+    .primary-btn {
+        padding: 0.6em 2.5em;
+    }
 }
