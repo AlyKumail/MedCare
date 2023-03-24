@@ -11,6 +11,8 @@
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.5.0",
         "react-scripts": "5.0.1",
+        "react-toastify": "^9.1.2",
+        "toastify": "^2.0.1",
         "web-vitals": "^2.1.4",
         "web3modal": "^1.9.12"
     },

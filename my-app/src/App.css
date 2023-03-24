@@ -99,3 +99,12 @@ img {
     /* border: 1px solid red; */
     padding: 1.5rem;
 }
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 80%;
+    }
+    .container {
+        width: 85%;   
+    }
+}

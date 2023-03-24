@@ -11,6 +11,9 @@ import Doctor from "./pages/Doctor";
 import Patients from "./pages/Patients";
 import PatientAccess from "./pages/PatientAccess";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   return (
     <div className="App">
@@ -31,6 +34,7 @@ function App() {
                 <Route path="/doctor/profile" element={<DoctorProfile />}></Route>
                 <Route path="/doctor/history" element={<DoctorHistory />}></Route> */}
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

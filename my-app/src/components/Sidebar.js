@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/Sidebar.css";
 import { Link } from "react-router-dom";
 
+import { toast } from "react-toastify";
+
 import Web3Modal from "web3modal";
 import { providers, Contract } from "ethers";
 import { useEffect, useRef, useState } from "react";
@@ -47,19 +49,65 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
     }
   };
 
-  useEffect(() => {
-    // if wallet is not connected, create a new instance of Web3Modal and connect the MetaMask wallet
-    if (!walletConnected) {
-      // Assign the Web3Modal class to the reference object by setting it's `current` value
-      // The `current` value is persisted throughout as long as this page is open
-      web3ModalRef.current = new Web3Modal({
-        network: "goerli",
-        providerOptions: {},
-        disableInjectedProvider: false,
-      });
-      connectWallet();
+  const onConnectWalletHandler = () => {
+    console.log(window.ethereum);
+    if (!window.ethereum) {
+      // window.alert("MetaMask not detected, please Install MetaMask");
+      toast.warn("MetaMask not installed!");
+      console.log("Not installed");
+    } else {
+      if (!walletConnected) {
+        // Assign the Web3Modal class to the reference object by setting it's `current` value
+        // The `current` value is persisted throughout as long as this page is open
+        web3ModalRef.current = new Web3Modal({
+          network: "goerli",
+          providerOptions: {},
+          disableInjectedProvider: false,
+        });
+        connectWallet();
+      } else {
+        toast.success("Wallet Connected");
+        // window.alert("Wallet Connected");
+      }
     }
-  }, [walletConnected]);
+  };
+
+  async function isConnected() {
+    const accounts = await window.ethereum.request({ method: "eth_accounts" });
+    console.log(accounts.length);
+    if (accounts.length !== 0) {
+      console.log("IN TRUE");
+
+      // console.log(`You're connected to: ${accounts[0]}`);
+      setWalletConnected(true);
+      return true;
+    } else {
+      console.log("IN FALSE");
+
+      // console.log("Metamask is not connected");
+      setWalletConnected(false);
+
+      return false;
+    }
+  }
+
+  useEffect(() => {
+    isConnected();
+  });
+
+  // useEffect(() => {
+  //   // if wallet is not connected, create a new instance of Web3Modal and connect the MetaMask wallet
+  //   if (!walletConnected) {
+  //     // Assign the Web3Modal class to the reference object by setting it's `current` value
+  //     // The `current` value is persisted throughout as long as this page is open
+  //     web3ModalRef.current = new Web3Modal({
+  //       network: "goerli",
+  //       providerOptions: {},
+  //       disableInjectedProvider: false,
+  //     });
+  //     connectWallet();
+  //   }
+  // }, [walletConnected]);
 
   // Create a reference to the Web3 Modal (used for connecting to Metamask) which persists as long as the page is open
   const web3ModalRef = useRef();
@@ -69,7 +117,7 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
       <div className="sidebar-wrap">
         <div className="logo">
           <img src={logo} alt="" />
-          {console.log(isDoctorDashboard)}
+          {/* {console.log(isDoctorDashboard)} */}
         </div>
         {isDoctorDashboard ? (
           <div className="navlinks">
@@ -136,8 +184,11 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
           </div>
         )}
 
-        <div className="connect">
-          <Link className="btn-connect">Connect Wallet</Link>
+        <div className="connect" onClick={onConnectWalletHandler}>
+          <Link className="btn-connect">
+            {" "}
+            {walletConnected ? "Connected" : "Connect Wallet"}{" "}
+          </Link>
         </div>
         <div className="logout">
           <Link to="/" className="btn-logout">
