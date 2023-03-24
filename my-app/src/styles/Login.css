@@ -145,3 +145,31 @@ form .primary-btn:hover {
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 768px){
+    .form-container{
+        flex-direction: column;
+    }
+    .form-wrap{
+        width: 100%;
+        /* background: white; */
+        padding: 2rem 1.5rem;
+        border-radius: 10px;
+        height: 120%;
+        z-index: 1;
+    }
+    .form-container { 
+        
+        padding: 2rem ;
+        
+    }
+    .whiteBg{
+        display: none;
+    }
+    .switch-btn{
+        width: 50%;
+    }
+    .switch{
+        margin: 1rem 0;
+    }
+}

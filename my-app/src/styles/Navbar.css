@@ -20,3 +20,7 @@ header .primary-btn {
 .logo-wrap {
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px){
+    
+}
