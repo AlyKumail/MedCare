@@ -53,7 +53,7 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
     console.log(window.ethereum);
     if (!window.ethereum) {
       // window.alert("MetaMask not detected, please Install MetaMask");
-      toast.warn("MetaMask not installed!");
+      toast.warn("MetaMask required!");
       console.log("Not installed");
     } else {
       if (!walletConnected) {
