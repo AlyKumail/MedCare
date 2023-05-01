@@ -184,16 +184,22 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
           </div>
         )}
 
-        <div className="connect" onClick={onConnectWalletHandler}>
+        <div
+          style={{
+            background: walletConnected ? "rgb(94, 199, 94)" : "#33333379",
+          }}
+          className="connect"
+          onClick={onConnectWalletHandler}
+        >
           <Link className="btn-connect">
             {" "}
             {walletConnected ? "Connected" : "Connect Wallet"}{" "}
           </Link>
         </div>
         <div className="logout">
-          <Link to="/" className="btn-logout">
+          <a href="#" className="btn-logout">
             Logout
-          </Link>
+          </a>
         </div>
       </div>
     </div>

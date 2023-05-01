@@ -89,7 +89,7 @@ img {
     min-height: 100vh;
 }
 
-.portal-main{
+.portal-main-wrap{
     border: 1px solid gray;
     padding: 0 .5rem;
 }

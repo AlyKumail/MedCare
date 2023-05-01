@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Doctor from "./pages/Doctor";
 import Patients from "./pages/Patients";
 import PatientAccess from "./pages/PatientAccess";
+import Dashboard from "./pages/Dashboard";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -18,7 +19,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/landing" element={<Home />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/patient" element={<Patient />}></Route>
         <Route path="/records" element={<Records />}></Route>

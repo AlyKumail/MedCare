@@ -9,7 +9,7 @@ import { register, reset } from "../features/auth/authSlice";
 
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   const [isDoctor, setIsDoctor] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -220,7 +220,7 @@ const Login = () => {
                   />
                 </div>
                 <button type="submit" className="primary-btn">
-                  Register
+                  {isLoading ? "Loading..." : "Register"}
                 </button>
                 <Link to="/login" className="forgotPassword">
                   Already registered ?
@@ -338,7 +338,7 @@ const Login = () => {
                   />
                 </div>
                 <a href="#" className="primary-btn">
-                  Register
+                  {isLoading ? "Loading..." : "Register"}
                 </a>
                 <Link to="/login" className="forgotPassword">
                   Already registered ?
@@ -365,4 +365,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
