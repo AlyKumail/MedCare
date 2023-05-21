@@ -52,7 +52,7 @@
     border-radius: 5px;
     display: block;
     cursor: pointer;
-    margin: 0 0 0 auto;
+    /* margin: 0 0 0 auto; */
     font-weight: 500;
 }
 .record-access button:hover{
@@ -109,8 +109,25 @@
 }
 .user-info-details{
     background-color: rgb(222, 255, 245);
-    padding: .27rem 2rem;
+    padding: .3rem 1rem;
     border-radius: 60px;
     color: #333;
     font-size: .85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .6rem;
+}
+.walletAddress{
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius: 60px;
+    padding: 0.2rem 1rem;
+}
+.bg-red{
+    background: rgb(199, 108, 108) !important;
+}
+.record-access-btns{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
 }

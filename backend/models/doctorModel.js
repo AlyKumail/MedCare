@@ -1,21 +1,6 @@
 const mongoose = require("mongoose");
 
-const doctorSchema = mongoose.Schema({
-  specialization: {
-    type: String,
-    required: false,
-  },
-  experience: {
-    type: String,
-    required: false,
-  },
-  hospital: {
-    type: String,
-    required: false,
-  },
-});
-
-const userSchema = mongoose.Schema(
+const doctorSchema = mongoose.Schema(
   {
     name: {
       type: String,
@@ -41,28 +26,18 @@ const userSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add a password value"],
     },
-    doctor: {
-      type: doctorSchema,
-      required: false,
-    },
-    dataShared: {
-      type: [String],
-      required: false,
-    },
-    walletAddress: {
+    specialization: {
       type: String,
-      required: [true, "Please add a wallet Address value"],
+      required: [true, "Please add a specialization value"],
     },
-    // _doctor: {
-    //   type: doctorSchema,
-    //   required: false,
-    // },
+    accessRequests: {
+      type: [String],
+      default: [],
+    },
   },
   {
     timestamps: true,
   }
 );
 
-var Doctor = mongoose.model("Doctor", doctorSchema);
-
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Doctor", doctorSchema);

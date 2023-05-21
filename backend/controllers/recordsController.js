@@ -14,7 +14,15 @@ const setRecord = asyncHandler(async (req, res) => {
   res.status(200).json({ message: "Set Record" });
 });
 
+// @desc Grant Access
+// @route Post /api/records
+// @access Private
+const grantAccess = asyncHandler(async (req, res) => {
+  res.status(200).json({ message: "Access Granted to " });
+});
+
 module.exports = {
   getRecords,
   setRecord,
+  grantAccess,
 };

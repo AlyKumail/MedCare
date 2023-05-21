@@ -1,5 +1,8 @@
 .doctor-container .portal-main{
-    padding: 1.2rem 0;
+    padding: .2rem 0;
+}
+.doctor-container .user-info{
+    margin-bottom: 1rem;
 }
 .doctor-container .record-access{
     width: 50%;  

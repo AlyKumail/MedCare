@@ -8,13 +8,20 @@ import Web3Modal from "web3modal";
 import { providers, Contract } from "ethers";
 import { useEffect, useRef, useState } from "react";
 
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 import logo from "../img/logo-dark.png";
 import grid from "../img/icon-grid.png";
 import record from "../img/icon-record.png";
 // import history from "../img/icon-history.png";
 import user from "../img/icon-user.png";
 
+import { logout, setWalletConnectedState } from "../features/auth/authSlice";
+
 const Sidebar = ({ active, isDoctorDashboard = false }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   // walletConnected keep track of whether the user's wallet is connected or not
   const [walletConnected, setWalletConnected] = useState(false);
 
@@ -44,13 +51,14 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
       // When used for the first time, it prompts the user to connect their wallet
       await getProviderOrSigner();
       setWalletConnected(true);
+      dispatch(setWalletConnectedState(true));
     } catch (err) {
       console.error(err);
     }
   };
 
   const onConnectWalletHandler = () => {
-    console.log(window.ethereum);
+    // console.log(window.ethereum);
     if (!window.ethereum) {
       // window.alert("MetaMask not detected, please Install MetaMask");
       toast.warn("MetaMask required!");
@@ -64,6 +72,7 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
           providerOptions: {},
           disableInjectedProvider: false,
         });
+        // console.log("connectWallet");
         connectWallet();
       } else {
         toast.success("Wallet Connected");
@@ -74,15 +83,15 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
 
   async function isConnected() {
     const accounts = await window.ethereum.request({ method: "eth_accounts" });
-    console.log(accounts.length);
+    // console.log(accounts.length);
     if (accounts.length !== 0) {
-      console.log("IN TRUE");
+      // console.log("IN TRUE");
 
       // console.log(`You're connected to: ${accounts[0]}`);
       setWalletConnected(true);
       return true;
     } else {
-      console.log("IN FALSE");
+      // console.log("IN FALSE");
 
       // console.log("Metamask is not connected");
       setWalletConnected(false);
@@ -111,6 +120,12 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
 
   // Create a reference to the Web3 Modal (used for connecting to Metamask) which persists as long as the page is open
   const web3ModalRef = useRef();
+
+  const logoutHandler = () => {
+    console.log("logging out");
+    dispatch(logout());
+    console.log("logged out");
+  };
 
   return (
     <div className="sidebar">
@@ -196,7 +211,7 @@ const Sidebar = ({ active, isDoctorDashboard = false }) => {
             {walletConnected ? "Connected" : "Connect Wallet"}{" "}
           </Link>
         </div>
-        <div className="logout">
+        <div onClick={logoutHandler} className="logout">
           <a href="#" className="btn-logout">
             Logout
           </a>

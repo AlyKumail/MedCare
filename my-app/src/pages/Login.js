@@ -1,11 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Login.css";
 
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
+import { login, reset } from "../features/auth/authSlice";
 
 const Login = () => {
   const [isDoctor, setIsDoctor] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const { email, password } = formData;
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+
+  const loginSubmitHandler = (e) => {
+    e.preventDefault();
+
+    const userData = {
+      email,
+      password,
+    };
+    dispatch(login(userData));
+  };
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+
+    if (isSuccess || user) {
+      navigate("/");
+    }
+
+    dispatch(reset());
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
+
+  const onChangeHandler = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <div className="login-container">
@@ -27,23 +74,35 @@ const Login = () => {
                 </div>
               </div>
             ) : (
-              <form action="#">
+              <form onSubmit={loginSubmitHandler} action="#">
                 <h3>Patient Login</h3>
                 <div className="form-item">
                   <label className="formLabel" htmlFor="email">
                     Email
                   </label>
-                  <input type="email" placeholder="" required />
+                  <input
+                    onChange={onChangeHandler}
+                    value={email}
+                    type="email"
+                    name="email"
+                    placeholder=""
+                    required
+                  />
                 </div>
                 <div className="form-item">
                   <label className="formLabel" htmlFor="password">
                     Password
                   </label>
-                  <input type="password" placeholder="" required />
+                  <input
+                    onChange={onChangeHandler}
+                    value={password}
+                    type="password"
+                    placeholder=""
+                    required
+                    name="password"
+                  />
                 </div>
-                <Link to="/patient" className="primary-btn">
-                  Login
-                </Link>
+                <button className="primary-btn">Login</button>
                 <a href="#" className="forgotPassword">
                   Forgot Password ?
                 </a>
@@ -52,23 +111,37 @@ const Login = () => {
           </div>
           <div className="form-wrap">
             {isDoctor ? (
-              <form action="#">
+              <form onSubmit={loginSubmitHandler} action="#">
                 <h3>Doctor Login</h3>
                 <div className="form-item">
                   <label className="formLabel" htmlFor="email">
                     Email
                   </label>
-                  <input type="email" placeholder="" required />
+                  <input
+                    onChange={onChangeHandler}
+                    value={email}
+                    type="email"
+                    name="email"
+                    placeholder=""
+                    required
+                  />
                 </div>
                 <div className="form-item">
                   <label className="formLabel" htmlFor="password">
                     Password
                   </label>
-                  <input type="password" placeholder="" required />
+                  <input
+                    onChange={onChangeHandler}
+                    value={password}
+                    type="password"
+                    placeholder=""
+                    required
+                    name="password"
+                  />
                 </div>
-                <Link to="/doctor" className="primary-btn">
+                <button type="submit" className="primary-btn">
                   Login
-                </Link>
+                </button>
                 <a href="#" className="forgotPassword">
                   Forgot Password ?
                 </a>

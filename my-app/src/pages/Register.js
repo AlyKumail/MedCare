@@ -19,6 +19,9 @@ const Register = () => {
     dob: "",
     country: "",
     specialization: "",
+    experience: "",
+    walletAddress: "",
+    hospital: "",
     password: "",
     password2: "",
   });
@@ -50,6 +53,9 @@ const Register = () => {
       dob: "",
       country: "",
       specialization: "",
+      experience: "",
+      walletAddress: "",
+      hospital: "",
       password: "",
       password2: "",
     });
@@ -69,6 +75,9 @@ const Register = () => {
             dob,
             country,
             specialization,
+            experience,
+            walletAddress,
+            hospital,
             password,
             password2,
           }
@@ -78,10 +87,11 @@ const Register = () => {
             phone,
             dob,
             country,
+            walletAddress,
             password,
             password2,
           };
-
+      console.log("Form submit");
       dispatch(register(userData));
     }
   };
@@ -93,6 +103,9 @@ const Register = () => {
     dob,
     country,
     specialization,
+    experience,
+    walletAddress,
+    hospital,
     password,
     password2,
   } = formData;
@@ -194,6 +207,20 @@ const Register = () => {
                 </div>
 
                 <div className="form-item">
+                  <label className="formLabel" htmlFor="walletAddress">
+                    Wallet Address*
+                  </label>
+                  <input
+                    type="text"
+                    value={walletAddress}
+                    placeholder=""
+                    name="walletAddress"
+                    onChange={onChangeHandler}
+                    required
+                  />
+                </div>
+
+                <div className="form-item">
                   <label className="formLabel" htmlFor="password">
                     Password*
                   </label>
@@ -230,8 +257,8 @@ const Register = () => {
           </div>
           <div className="form-wrap">
             {isDoctor ? (
-              <form action="#">
-                <h3>Patient Registeration</h3>
+              <form onSubmit={onSubmitHandler}>
+                <h3>Doctor Registeration</h3>
                 <div className="form-item">
                   <label className="formLabel" htmlFor="name">
                     Name*
@@ -312,6 +339,48 @@ const Register = () => {
                 </div>
 
                 <div className="form-item">
+                  <label className="formLabel" htmlFor="experience">
+                    Experience*
+                  </label>
+                  <input
+                    type="text"
+                    value={experience}
+                    name="experience"
+                    onChange={onChangeHandler}
+                    placeholder=""
+                    required
+                  />
+                </div>
+
+                <div className="form-item">
+                  <label className="formLabel" htmlFor="walletAddress">
+                    Wallet Address*
+                  </label>
+                  <input
+                    type="text"
+                    value={walletAddress}
+                    placeholder=""
+                    name="walletAddress"
+                    onChange={onChangeHandler}
+                    required
+                  />
+                </div>
+
+                <div className="form-item">
+                  <label className="formLabel" htmlFor="hospital">
+                    Hospital*
+                  </label>
+                  <input
+                    type="text"
+                    value={hospital}
+                    placeholder=""
+                    name="hospital"
+                    onChange={onChangeHandler}
+                    required
+                  />
+                </div>
+
+                <div className="form-item">
                   <label className="formLabel" htmlFor="password">
                     Password*
                   </label>
@@ -337,9 +406,9 @@ const Register = () => {
                     required
                   />
                 </div>
-                <a href="#" className="primary-btn">
+                <button type="submit" className="primary-btn">
                   {isLoading ? "Loading..." : "Register"}
-                </a>
+                </button>
                 <Link to="/login" className="forgotPassword">
                   Already registered ?
                 </Link>

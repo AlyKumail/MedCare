@@ -21,7 +21,7 @@ const Dashboard = () => {
     if (!user) {
       navigate("/landing");
     } else {
-      if (user.specialization) {
+      if (user?.doctor?.specialization) {
         setUserType("Doctor");
       } else {
         setUserType("Patient");

@@ -10,6 +10,14 @@ connectDB();
 
 const app = express();
 
+const cors = require("cors");
+
+const corsOptions = {
+  exposedHeaders: "Authorization",
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
