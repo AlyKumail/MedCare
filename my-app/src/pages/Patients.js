@@ -32,13 +32,13 @@ const Doctor = () => {
                 </p>
               </div>
               <p>
-                <b>Patient ID : </b>HEgTj2HP31FHPXAxxp3QUN9FhhFiPS8JTVpMLet1tyyw
+                <b>Patient ID : </b>0x4F12c5a22861B7136e4D1f14DA5129e74526B9b4
               </p>
               <p>
-                <b>Hospital : </b>Shifa, Islamabad
+                <b>Hospital : </b>PIMS, Islamabad
               </p>
               <p>
-                <b>Last Appointment : </b>2/03/2023
+                <b>Last Appointment : </b>0/00/0000
               </p>
             </div>
             <div className="patients-item-button">
@@ -47,7 +47,7 @@ const Doctor = () => {
               </button>
             </div>
           </div>
-          <div className="patients-item flex-center">
+          {/* <div className="patients-item flex-center">
             <div className="patients-item-img">
               <img src={patientImg2} alt="" />
             </div>
@@ -150,7 +150,7 @@ const Doctor = () => {
                 <Link to="/patientAccess">View Detail</Link>
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

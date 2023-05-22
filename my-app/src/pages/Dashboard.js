@@ -18,10 +18,11 @@ const Dashboard = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    console.log("1122", user);
     if (!user) {
       navigate("/landing");
     } else {
-      if (user?.doctor?.specialization) {
+      if (user?.specialization) {
         setUserType("Doctor");
       } else {
         setUserType("Patient");

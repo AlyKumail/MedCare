@@ -113,14 +113,14 @@ const Doctor = () => {
               <h3>Total Appointment</h3>
             </div>
             <img src={totalAppointment} alt="" />
-            <p>215</p>
+            <p>0</p>
           </div>
           <div className="total-patient card">
             <div className="card-header">
               <h3>Total Patient</h3>
             </div>
             <img src={totalPatient} alt="" />
-            <p>215</p>
+            <p>0</p>
           </div>
         </div>
         <div className="portal-main-row">
@@ -131,19 +131,19 @@ const Doctor = () => {
             <div className="sub-card flex-start-col">
               <div className="sub-card-header flex-between-center">
                 <p>
-                  <b>Patient Name : </b>Behram Khanzada
+                  <b>Patient Name : </b>Ali Kumail
                 </p>
                 <span className="date">24/2/2023</span>
               </div>
               <p>
-                <b>Patient ID : </b>HEgTj2HP31FHPXAxxp3QUN9FhhFiPS8JTVpMLet1tyyw
+                <b>Patient ID : </b>0x4F12c5a22861B7136e4D1f14DA5129e74526B9b4
               </p>
               <p>
-                <b>Hospital : </b>Shifa, Islamabad
+                <b>Hospital : </b>PIMS, Islamabad
               </p>
               <button>View</button>
             </div>
-            <div className="sub-card flex-start-col">
+            {/* <div className="sub-card flex-start-col">
               <div className="sub-card-header flex-between-center">
                 <p>
                   <b>Patient Name : </b>Behram Khanzada
@@ -172,7 +172,7 @@ const Doctor = () => {
                 <b>Hospital : </b>Shifa, Islamabad
               </p>
               <button>View</button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 import heroImg from "../img/home-img.png";
 import Navbar from "../components/Navbar";
+import Services from "../components/Services";
+import Works from "../components/Works";
+import Process from "../components/Process";
 
 const Home = () => {
   return (
@@ -14,9 +17,12 @@ const Home = () => {
           <div className="hero-left">
             <h1>Most secure Electronic Health Record Management System</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco
+              Electronic Health Records (EHR) revolutionize the way healthcare
+              providers manage and exchange patient information. Traditionally,
+              patient data was stored in paper-based records, making it
+              difficult to access, share, and maintain accuracy. EHR systems
+              digitize and centralize patient health information, improving
+              efficiency and patient care.
             </p>
 
             <Link to="/register" className="primary-btn">
@@ -27,6 +33,9 @@ const Home = () => {
             <img src={heroImg} alt="" />
           </div>
         </section>
+        <Services></Services>
+        <Works></Works>
+        <Process></Process>
       </div>
     </div>
   );

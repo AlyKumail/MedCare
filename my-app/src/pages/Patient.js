@@ -65,7 +65,7 @@ const Patient = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getDataShared({ token: user.token }));
+    dispatch(getDataShared({ token: user?.token }));
 
     // setWallet(window.ethereum)
     if (window.ethereum.selectedAddress) {
@@ -89,6 +89,8 @@ const Patient = () => {
     if (!user) {
       console.log("no user");
       navigate("/landing");
+    } else if (user?.doctor?.specialization) {
+      navigate("/doctor");
     } else {
       console.log("yes user");
 
@@ -230,11 +232,13 @@ const Patient = () => {
   function handleRevokeDataSharedWith(address) {
     console.log("handleRevokeDataSharedWith address:", address);
     // TODO : remove from Smart COntract
-    // revokeAccess(address);
+    revokeAccess(address);
 
     // TODO : dispatch
     dispatch(removeDataShared({ token: user.token, address: address }));
-    dispatch(getDataShared({ token: user.token }));
+    setTimeout(() => {
+      dispatch(getDataShared({ token: user.token }));
+    }, 1000);
   }
 
   useEffect(() => {
@@ -340,7 +344,7 @@ const Patient = () => {
                 <h3>Access Request</h3>
               </div>
 
-              <div className="sub-card flex-start-col">
+              {/* <div className="sub-card flex-start-col">
                 <div className="sub-card-header flex-between-center">
                   <p>
                     <b>Doctor Name : </b>Ali Kumail
@@ -387,7 +391,7 @@ const Patient = () => {
                   <b>Hospital : </b>Shifa, Islamabad
                 </p>
                 <button>Grant Access</button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="portal-main-right">

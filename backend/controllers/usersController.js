@@ -108,7 +108,7 @@ const loginUser = asyncHandler(async (req, res) => {
       phone: user.phone,
       dob: user.dob,
       country: user.country,
-      specialization: user.specialization,
+      specialization: user.doctor.specialization,
       token: generateToken(user._id),
     });
   } else {
